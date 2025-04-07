@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
         exit();
     } else {
         // If the book was never borrowed, allow deletion
-        $conn->query("DELETE FROM book WHERE id=$id");
+        $conn->query("DELETE FROM books WHERE id=$id");
         header("Location: view_books.php?success=Book deleted successfully.");
         exit();
     }
